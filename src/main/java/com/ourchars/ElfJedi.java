@@ -38,5 +38,16 @@ public class ElfJedi extends Elf implements Jedi
 		// TODO Auto-generated method stub
 		super.setWeapon(Weapon.LIGHTSABER);
 	}
-
+	
+	public static ElfJedi makeElfJedi()
+	{
+		ElfJedi ourElfJedi = new ElfJedi();
+		
+		ourElfJedi.changehealth();
+		ourElfJedi.changeMagic();
+		ourElfJedi.setName(null);
+		ourElfJedi.setWeapon(null);
+		
+		return ourElfJedi;
+	}
 }

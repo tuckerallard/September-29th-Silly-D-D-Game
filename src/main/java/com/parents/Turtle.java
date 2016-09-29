@@ -20,14 +20,14 @@ public class Turtle extends CharacterClass
 	public void setHealth(int health) 
 	{
 		// TODO Auto-generated method stub
-		super.setHealth(health + 100);
+		super.setHealth(health + 25);
 	}
 
 	@Override
 	public void setMagic(int magic) 
 	{
 		// TODO Auto-generated method stub
-		super.setMagic(magic + 50);
+		super.setMagic(magic + 5);
 	}
 
 	@Override
@@ -36,7 +36,6 @@ public class Turtle extends CharacterClass
 		// TODO Auto-generated method stub
 		super.setName("Raphael");
 	}
-	
 	
 	
 }

@@ -7,12 +7,6 @@ import com.parents.Twilek;
 
 public class TwilekJedi extends Twilek implements Jedi 
 {
-	private Weapons twilekWeapon = null;
-
-	public TwilekJedi(Weapons twilekWeapon) {
-		super();
-		this.twilekWeapon = twilekWeapon;
-	}
 
 	public TwilekJedi()
 	{
@@ -27,14 +21,14 @@ public class TwilekJedi extends Twilek implements Jedi
 	@Override
 	public void changehealth() 
 	{
-		super.setHealth(health + 50);
+		super.setHealth(health + 75);
 
 	}
 
 	@Override
 	public void changeMagic() 
 	{
-		super.setMagic(magic + 100);
+		super.setMagic(magic + 10);
 
 	}
 	
@@ -44,5 +38,16 @@ public class TwilekJedi extends Twilek implements Jedi
 		super.setWeapon(Weapon.LIGHTSABER);
 	}
 
+	public static TwilekJedi makeTwilekJedi()
+	{
+		TwilekJedi ourTwilekJedi = new TwilekJedi();
+		
+		ourTwilekJedi.changehealth();
+		ourTwilekJedi.changeMagic();
+		ourTwilekJedi.setName(null);
+		ourTwilekJedi.setWeapon(null);
+		
+		return ourTwilekJedi;
 
+	}
 }

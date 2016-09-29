@@ -20,14 +20,14 @@ public class Smurf extends CharacterClass
 	public void setHealth(int health) 
 	{
 		// TODO Auto-generated method stub
-		super.setHealth(health + 100);
+		super.setHealth(health + 10);
 	}
 
 	@Override
 	public void setMagic(int magic) 
 	{
 		// TODO Auto-generated method stub
-		super.setMagic(magic + 50);
+		super.setMagic(magic + 100);
 	}
 
 	@Override

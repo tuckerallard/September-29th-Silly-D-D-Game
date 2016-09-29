@@ -5,14 +5,8 @@ import com.app.Weapons.Weapon;
 import com.interfaces.Royal;
 import com.parents.Elf;
 
-public class ElfRoyal extends Elf implements Royal {
-
-	private Weapons royalWeapon = null;
-	
-	public ElfRoyal(Weapons royalWeapon) {
-		super();
-		this.royalWeapon = royalWeapon;
-	}
+public class ElfRoyal extends Elf implements Royal 
+{
 
 	public ElfRoyal()
 	{
@@ -44,5 +38,17 @@ public class ElfRoyal extends Elf implements Royal {
 		super.setWeapon(Weapon.SCROLL);
 	}
 
+	public static ElfRoyal makeElfRoyal()
+	{
+		ElfRoyal ourElfRoyal = new ElfRoyal();
+		
+		ourElfRoyal.changehealth();
+		ourElfRoyal.changeMagic();
+		ourElfRoyal.setName(null);
+		ourElfRoyal.setWeapon(null);
+		
+		return ourElfRoyal;
+
+	}
 	
 }

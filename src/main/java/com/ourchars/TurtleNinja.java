@@ -7,12 +7,6 @@ import com.parents.Turtle;
 
 public class TurtleNinja extends Turtle implements Ninja 
 {
-	private Weapons turtleWeapon = null;
-
-	public TurtleNinja(Weapons turtleWeapon) {
-		super();
-		this.turtleWeapon = turtleWeapon;
-	}
 
 	public TurtleNinja()
 	{
@@ -44,5 +38,16 @@ public class TurtleNinja extends Turtle implements Ninja
 		super.setWeapon(Weapon.NUNCHUCK);
 	}
 
-	
+	public static TurtleNinja makeTurtleNinja()
+	{
+		TurtleNinja ourTurtleNinja = new TurtleNinja();
+		
+		ourTurtleNinja.changehealth();
+		ourTurtleNinja.changeMagic();
+		ourTurtleNinja.setName(null);
+		ourTurtleNinja.setWeapon(null);
+		
+		return ourTurtleNinja;
+
+	}
 }

@@ -5,14 +5,8 @@ import com.app.Weapons.Weapon;
 import com.interfaces.Warrior;
 import com.parents.Smurf;
 
-public class SmurfWarrior extends Smurf implements Warrior {
-	
-	private Weapons warriorWeapon = null;
-
-	public SmurfWarrior(Weapons warriorWeapon) {
-		super();
-		this.warriorWeapon = warriorWeapon;
-	}
+public class SmurfWarrior extends Smurf implements Warrior 
+{
 
 	public SmurfWarrior()
 	{
@@ -44,5 +38,17 @@ public class SmurfWarrior extends Smurf implements Warrior {
 		super.setWeapon(Weapon.MACE);
 	}
 
+	public static SmurfWarrior makeSmurfWarrior()
+	{
+		SmurfWarrior ourSmurfWarrior = new SmurfWarrior();
+		
+		ourSmurfWarrior.changehealth();
+		ourSmurfWarrior.changeMagic();
+		ourSmurfWarrior.setName(null);
+		ourSmurfWarrior.setWeapon(null);
+		
+		return ourSmurfWarrior;
+
+	}
 
 }

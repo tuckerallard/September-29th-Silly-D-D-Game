@@ -5,15 +5,9 @@ import com.app.Weapons.Weapon;
 import com.interfaces.Wizard;
 import com.parents.Human;
 
-public class HumanWizard extends Human implements Wizard {
-
-	private Weapons wizardWeapon = null;
+public class HumanWizard extends Human implements Wizard 
+{
 	
-	public HumanWizard(Weapons wizardWeapon) {
-		super();
-		this.wizardWeapon = wizardWeapon;
-	}
-
 	public HumanWizard()
 	{
 		super();
@@ -44,5 +38,18 @@ public class HumanWizard extends Human implements Wizard {
 		super.setWeapon(Weapon.WAND);
 	}
 
+	public static HumanWizard makeHumanWizard()
+	{
+		HumanWizard ourHumanWizard = new HumanWizard();
+		
+		ourHumanWizard.changehealth();
+//		ourHumanWizard.setHealth(0);
+//		ourHumanWizard.setMagic(0);
+		ourHumanWizard.changeMagic();
+		ourHumanWizard.setName(null);
+		ourHumanWizard.setWeapon(null);
+		
+		return ourHumanWizard;
 
+	}
 }
